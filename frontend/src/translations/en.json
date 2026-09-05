@@ -1,0 +1,118 @@
+{
+    "brand": "SK Group",
+    "tagline": "Trusted Service • Quality Commitment • Customer First",
+    "nav": {
+        "home": "Home",
+        "transport": "Transportation",
+        "realEstate": "Real Estate",
+        "cyberCafe": "Cyber Cafe",
+        "enquiry": "Enquiry",
+        "admin": "Admin"
+    },
+    "hero": {
+        "title": "Built from real experience.",
+        "subtitle": "SK Group Patna brings together businesses built through years of hands-on experience, local relationships and customer trust.",
+        "cta": "Explore Our Businesses"
+    },
+    "stats": {
+        "yearsRealEstate": "Years in Real Estate",
+        "families": "Families Served",
+        "yearsCafe": "Years in Cyber Cafe",
+        "customers": "Customers Served"
+    },
+    "businesses": {
+        "realEstate": "Real Estate",
+        "transport": "Transportation",
+        "cyberCafe": "Cyber Cafe",
+        "realEstateDesc": "Find your dream residential plot near Bihta, Patna.",
+        "transportDesc": "Safe, comfortable & reliable cab services.",
+        "cyberCafeDesc": "Digital solutions, documentation & office services."
+    },
+    "transport": {
+        "title": "Patna to Your Destination",
+        "subtitle": "Safe • Comfortable • Reliable",
+        "rides": {
+            "long": "Long Trips",
+            "short": "Short Trips",
+            "family": "Family Trips",
+            "bachelors": "Bachelors Trip",
+            "officer": "Officer Duty",
+            "weekend": "Weekend Trips"
+        },
+        "features": {
+            "budget": "Budget Friendly",
+            "service": "Best Service",
+            "memories": "Memorable Journeys"
+        },
+        "pricing": "Choose Your Ride",
+        "sedan": "Sedan (Dzire / Etios)",
+        "ertiga": "Ertiga",
+        "innova": "Innova Crysta",
+        "hours": "HOURS / KM PACKAGE",
+        "extraHour": "Extra Hour",
+        "toll": "Toll Tax & Parking Extra",
+        "drivers": "Well Experienced Drivers",
+        "maintained": "Well Maintained Commercial Cars",
+        "comfort": "Your Comfort, Our Commitment"
+    },
+    "realEstate": {
+        "title": "Real Estate - Residential Plots",
+        "subtitle": "Find your dream space near Bihta, Patna.",
+        "cta": "Visit Our Real Estate Site",
+        "description": "We deal exclusively in residential plots. Trusted by 200+ families."
+    },
+    "cafe": {
+        "title": "Cyber Cafe & Office Services",
+        "subtitle": "Everyday digital services, under one roof.",
+        "hours": "Opening Hours",
+        "morning": "Morning: 9:30 AM - 1:30 PM",
+        "evening": "Evening: 4:00 PM - 9:00 PM",
+        "services": {
+            "online": "Online Services",
+            "printing": "Printing & Scanning",
+            "documentation": "Documentation",
+            "computer": "Computer Assistance",
+            "form": "Form Filling",
+            "marketing": "Website & Digital Marketing",
+            "more": "And More"
+        },
+        "address": "Shanti Kunj Cyber Cafe, B-14 Patrakar Nagar, Sector-14, Kankarbagh Patna-20"
+    },
+    "enquiry": {
+        "title": "Get in Touch",
+        "subtitle": "We're here to help. Fill the form below.",
+        "name": "Full Name *",
+        "phone": "Phone Number *",
+        "email": "Email Address",
+        "message": "Your Message *",
+        "service": "Select Service",
+        "submit": "Submit Enquiry",
+        "success": "Enquiry submitted successfully! We'll contact you soon."
+    },
+    "admin": {
+        "login": "Admin Login",
+        "username": "Username",
+        "password": "Password",
+        "otp": "Enter OTP",
+        "requestOtp": "Request OTP",
+        "verify": "Verify & Login",
+        "dashboard": "Dashboard",
+        "enquiries": "Enquiries",
+        "unread": "Unread",
+        "read": "Read",
+        "delete": "Delete",
+        "markRead": "Mark as Read",
+        "logout": "Logout",
+        "newEnquiry": "New Enquiry Received!",
+        "from": "From",
+        "about": "About"
+    },
+    "footer": {
+        "address": "Address",
+        "contact": "Contact",
+        "whatsapp": "WhatsApp",
+        "email": "Email",
+        "follow": "Follow Us",
+        "rights": "All rights reserved."
+    }
+}

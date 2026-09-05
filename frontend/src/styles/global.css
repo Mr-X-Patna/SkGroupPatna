@@ -1,0 +1,401 @@
+/* ===== CSS VARIABLES (Your Navy & Gold Theme) ===== */
+:root {
+    --navy: #071a33;
+    --navy-dark: #030d1b;
+    --navy-light: #0d2a4d;
+    --gold: #f5b51b;
+    --gold-light: #ffd45a;
+    --gold-dark: #c98d00;
+    --white: #ffffff;
+    --black: #000000;
+    --text: #172033;
+    --text-light: #667085;
+    --surface: #ffffff;
+    --surface-2: #f5f7fa;
+    --border: rgba(7, 26, 51, 0.12);
+    --shadow-sm: 0 8px 25px rgba(7, 26, 51, 0.08);
+    --shadow-md: 0 18px 50px rgba(7, 26, 51, 0.13);
+    --shadow-gold: 0 15px 45px rgba(245, 181, 27, 0.20);
+    --radius-sm: 10px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+    --transition: 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --navy: #020b18;
+    --navy-dark: #010711;
+    --navy-light: #0a203b;
+    --white: #ffffff;
+    --text: #edf2f7;
+    --text-light: #a9b5c5;
+    --surface: #08172a;
+    --surface-2: #061326;
+    --border: rgba(255, 255, 255, 0.10);
+    --shadow-sm: 0 8px 25px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--surface-2);
+    color: var(--text);
+    transition: background-color var(--transition), color var(--transition);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface-2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--navy);
+    transition: color var(--transition);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: var(--white);
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all var(--transition);
+    box-shadow: var(--shadow-gold);
+}
+
+.btn-gold:hover {
+    background-color: var(--gold-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(245, 181, 27, 0.30);
+}
+
+.btn-outline-gold {
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all var(--transition);
+}
+
+.btn-outline-gold:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-2px);
+}
+
+.card-glow {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 30px;
+    transition: all var(--transition);
+    border: 1px solid var(--border);
+    height: 100%;
+}
+
+.card-glow:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.navbar-custom {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+    transition: all var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--navy) !important;
+}
+
+.navbar-brand span {
+    color: var(--gold);
+}
+
+.nav-link {
+    color: var(--text) !important;
+    font-weight: 500;
+    transition: color var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--gold) !important;
+}
+
+.nav-link.active {
+    color: var(--gold) !important;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    padding: 100px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(245, 181, 27, 0.10) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.hero-title span {
+    color: var(--gold);
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--navy);
+    transition: color var(--transition);
+}
+
+[data-theme="dark"] .section-title {
+    color: var(--white);
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--gold);
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.icon-box {
+    width: 72px;
+    height: 72px;
+    background: rgba(245, 181, 27, 0.12);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 16px;
+    transition: all var(--transition);
+}
+
+.icon-box:hover {
+    background: var(--gold);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.price-card {
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border);
+    padding: 28px;
+    transition: all var(--transition);
+    height: 100%;
+}
+
+.price-card.featured {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-gold);
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+.price-amount {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--navy);
+}
+
+[data-theme="dark"] .price-amount {
+    color: var(--white);
+}
+
+.price-amount span {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+.price-feature {
+    padding: 6px 0;
+    color: var(--text-light);
+}
+
+.price-feature i {
+    color: var(--gold);
+    margin-right: 10px;
+}
+
+.form-control-custom {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    color: var(--text);
+    transition: all var(--transition);
+}
+
+.form-control-custom:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 4px rgba(245, 181, 27, 0.15);
+    background: var(--surface);
+}
+
+.form-control-custom::placeholder {
+    color: var(--text-light);
+}
+
+.admin-sidebar {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+.admin-card {
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    padding: 20px;
+    transition: all var(--transition);
+}
+
+.admin-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.admin-badge-unread {
+    background: #dc3545;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.notification-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: var(--surface);
+    border-left: 5px solid var(--gold);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    padding: 18px 24px;
+    max-width: 380px;
+    animation: slideInRight 0.5s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .price-amount {
+        font-size: 2.2rem;
+    }
+}

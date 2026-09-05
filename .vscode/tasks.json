@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Remove Git metadata",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Remove-Item \".git\" -Force -Recurse"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Verify Git metadata removed",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"if (Test-Path \".git\") { Write-Error \".git still exists\"; exit 1 } else { Write-Output \".git removed\" }"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
