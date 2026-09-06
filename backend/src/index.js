@@ -19,7 +19,7 @@ app.use(helmet({
 }));
 
 // IMPORTANT: CORS must allow your frontend domain
-const clientUrl = process.env.CLIENT_URL || 'https://localhost:3000';
+const clientUrl = process.env.CLIENT_URL || 'http://localhost:3000';
 app.use(cors({
   origin: clientUrl,
   credentials: true,
@@ -69,9 +69,9 @@ app.use((req, res) => {
   });
 });
 
-// ====== Create HTTPS Server (NO SSL for Render) ======
-const https = require('https');
-const server = https.createServer(app);
+// ====== Create HTTP Server (NO SSL for Render) ======
+const http = require('http');
+const server = http.createServer(app);
 
 // ====== Socket.IO ======
 const { Server } = require('socket.io');
