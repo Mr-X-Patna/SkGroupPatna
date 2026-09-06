@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
@@ -8,6 +8,9 @@ import ConnectionStatus from './ConnectionStatus';
 const Navbar = () => {
     const { t, language, toggleLanguage } = useLanguage();
     const { theme, toggleTheme } = useTheme();
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const closeMenu = () => setMenuOpen(false);
 
     return (
         <nav className="navbar navbar-expand-lg navbar-custom sticky-top">
@@ -31,27 +34,29 @@ const Navbar = () => {
                 <button
                     className="navbar-toggler border-0"
                     type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded={menuOpen}
+                    aria-label="Toggle navigation"
+                    onClick={() => setMenuOpen((isOpen) => !isOpen)}
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div className={`collapse navbar-collapse${menuOpen ? ' show' : ''}`} id="navbarNav">
                     <ul className="navbar-nav ms-auto align-items-center gap-2">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/transport">{t('nav.transport')}</NavLink>
+                            <NavLink className="nav-link" to="/transport" onClick={closeMenu}>{t('nav.transport')}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/realestate">{t('nav.realEstate')}</NavLink>
+                            <NavLink className="nav-link" to="/realestate" onClick={closeMenu}>{t('nav.realEstate')}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/cybercafe">{t('nav.cyberCafe')}</NavLink>
+                            <NavLink className="nav-link" to="/cybercafe" onClick={closeMenu}>{t('nav.cyberCafe')}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/enquiry">{t('nav.enquiry')}</NavLink>
+                            <NavLink className="nav-link" to="/enquiry" onClick={closeMenu}>{t('nav.enquiry')}</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/admin">{t('nav.admin')}</NavLink>
+                            <NavLink className="nav-link" to="/admin" onClick={closeMenu}>{t('nav.admin')}</NavLink>
                         </li>
                         <li className="nav-item">
                             <button
