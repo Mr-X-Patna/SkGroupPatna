@@ -39,9 +39,6 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto align-items-center gap-2">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/">{t('nav.home')}</NavLink>
-                        </li>
-                        <li className="nav-item">
                             <NavLink className="nav-link" to="/transport">{t('nav.transport')}</NavLink>
                         </li>
                         <li className="nav-item">
