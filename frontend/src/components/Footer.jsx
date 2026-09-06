@@ -21,13 +21,13 @@ const Footer = () => {
                         <p className="text-light-50 small mb-1">
                             <i className="fas fa-whatsapp text-success me-2"></i>
                             <a href="https://wa.me/918340554027" className="text-white text-decoration-none">
-                                +91 8340554027
+                                WhatsApp
                             </a>
                         </p>
                         <p className="text-light-50 small mb-1">
                             <i className="fas fa-envelope text-gold me-2"></i>
                             <a href="mailto:tk8780078@gmail.com" className="text-white text-decoration-none">
-                                tk8780078@gmail.com
+                                Email
                             </a>
                         </p>
                         <p className="text-light-50 small">
